@@ -45,6 +45,8 @@ function takeOrder(){
         setTimeout(()=>{
             let randomItem = addRandomItem();
             let obj = {randomItem};
+            sec4.innerHTML= "ORDER TAKEN";
+            sec4.style.color = "black";
             resolve(obj);
         },2500)
     });
@@ -54,6 +56,8 @@ function orderPrep(){
     return new Promise(resolve=>{
        setTimeout(()=>{
            let obj ={ order_status:true,paid:false};
+           sec4.innerHTML= "PREPARING ORDER";
+            sec4.style.color = "orange";
            return resolve(obj);       
        },1500)
         
@@ -64,12 +68,16 @@ function payOrder(obj){
     return new Promise(resolve=>{
         setTimeout(()=>{
             obj.paid=true;
+            sec4.innerHTML= "ORDER COMPLETE";
+            sec4.style.color = "green";
             resolve(obj);
         },1000)
     });
 } 
 
 function thankyouFnc() {
+    sec4.innerHTML= "Thank You";
+    sec4.style.color = "red";
     alert('Thank you for eating with us today!');
     console.log('Thank you for eating with us today!');
 }

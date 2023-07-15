@@ -71,6 +71,17 @@ h6{
     text-align: center;
     margin-bottom:10%;
 }
+#sec4{
+    /* border: 2px solid red; */
+    margin-top: 5%;
+    background-color: rgb(255, 255, 255);
+    color:red;
+    text-shadow: 1px 1px grey;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px grey;
+  
+}
 
 
 /* search  div style  */
@@ -122,27 +133,14 @@ h6{
     outline:none;
     font-size: 1.2vw;
 }
-#search input:active{
-    /* border: none; */
-}
+
 #searchDiv img{
     height: 100%;
 }
 #iconSearch{
     font-size: 1.2vw;
 }
-/* #searchIcon{
-    height: 3%;
-    padding: 4px 0;
-    width: 3%;
-    border: 2px solid red;
-} */
 
-/* datadiv */
-
-#dataDiv{
-
-}
 #banner{
     padding: 1rem;
 }
