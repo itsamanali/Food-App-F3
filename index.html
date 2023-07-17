@@ -36,7 +36,15 @@
                 </ol>
             </div>
             <div id="sec4">
-                Hello
+                HELLO
+            </div>
+            <div id="sec5">
+                <p onclick="showOreders()">ORDERED ITEMS</p>
+                <ol id="ordList">
+                    
+                   
+                </ol>
+                <h6 id="ordSum"></h6>
             </div>
            
         </div>
@@ -57,7 +65,18 @@
             <div  id="cardContainer">
                 <h3>Menu</h3>
                 <div id="cards">
-                    
+                    <template>
+                        <div class="cardImg">
+                            <img src="#" alt="">
+                        </div>
+                        <div class="cardBody">
+                            <div class="c1">
+                                <h3>name</h3>
+                                <p>price</p>
+                            </div>
+                            <button class="c2" onclick="addToMap(this)">+</button>
+                        </div>
+                    </template>
                 </div>
             </div>
         </div>

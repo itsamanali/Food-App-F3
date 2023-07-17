@@ -32,8 +32,15 @@ body{
     width: 80%;
     background-color: hsl(210,10.53%,7.45%)
 }
+#sec1{
+    position: relative;
+}
 #logo{
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     /* height: 100%; */
     /* border: 2px soliborder: 2px solid rgb(238, 255, 0);d rgb(238, 255, 0); */
 }
@@ -44,7 +51,7 @@ body{
     font-size: 1vw;
     text-align: center;
     color: red;
-    padding-bottom: 4%;
+    padding-bottom: 1%;
 }
 #sec1 h2{
     text-align: center;
@@ -82,8 +89,38 @@ h6{
     box-shadow: 2px 2px grey;
   
 }
+#sec5{
+    border: 2px solid rgb(255, 255, 255);
+    /* margin-top: 5%; */
+    margin-bottom: 0;
 
-
+    /* padding-left: 5%; */
+}
+#sec5 p{
+    
+    font-size: 1vw;
+    text-align: center;
+    background-color: red;
+    margin: 2%;
+}
+#sec5 ol{
+    padding-left: 10%;
+}
+#sec5 li{
+    font-size: 1vw;
+    /* background-color: white; */
+    /* color: black; */
+    padding: 2%;
+    border-bottom: 1px solid red;
+}
+#sec5 h6{
+    font-size: 1vw;
+    background-color:#ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
 /* search  div style  */
 .btn{
     /* padding: 1%; */
@@ -164,7 +201,7 @@ h6{
     flex-wrap: wrap;
     
 }
-#card{
+.card{
     width: 28%;
     border-radius: 5px;
     background-color:  #191D20;
@@ -172,37 +209,37 @@ h6{
     margin: 2%;
     font-size: 2vw;
 }
-#card:hover{
+.card:hover{
     background-color:#272A30;
 }
-#cardImg img{
+.cardImg img{
     width: 100%;
     /* border: 1px solid red; */
     border-radius: 5px;
 }
-#cardImg{
+.cardImg{
     padding: 2%;
 }
-#cardBody{
+.cardBody{
    position: relative;
    /* border: 2px solid green; */
 }
-#c1{
+.c1{
     width: 80%;
     padding: 1%;
 }
-#c1 h3{
+.c1 h3{
     font-size: 1.5vw;
     font-weight: 400;
 
 }
-#c1 p{
+.c1 p{
     padding-left: 5%;
     font-size: 1vw;
     font-weight: 200;
 }
 
-#c2{
+.c2{
     text-align: center;
     font-size: 2vw;
     width: 8%;
@@ -220,6 +257,9 @@ h6{
     top: 10%;
     cursor: pointer;
 }
-#c2:hover{
+.c2:hover{
     background-color:#191D20;
+}
+.hide{
+    display: none;
 }
