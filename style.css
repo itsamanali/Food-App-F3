@@ -121,6 +121,20 @@ h6{
     margin-top: 5%;
     margin-bottom: 0;
 }
+#payBtn{
+    
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
+#payBtn button{
+    color: white;
+    background-color: rgb(41, 176, 59);
+    padding: 5px;
+    border-radius: 10px;
+    width: 70%;
+}
 /* search  div style  */
 .btn{
     /* padding: 1%; */

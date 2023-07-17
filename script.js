@@ -86,12 +86,15 @@ function payOrder(obj){
 } 
 
 function thankyouFnc() {
-    sec4.innerHTML= "Thank You";
+    sec4.innerHTML= "Welcome";
     sec4.style.color = "red";
-    document.querySelector("#sec5 h6").innerHTML="PAID";
-    document.querySelector("#sec5 h6").style.fontSize="1.5vw";
+    document.querySelector("#sec5 h6").innerHTML="";
+    document.querySelector("#sec5 h6").style.fontSize="1vw";
     alert('Thank you for eating with us today!');
     console.log('Thank you for eating with us today!');
+    orderMap.clear();
+    searchVal.value = "";
+
 }
 
 async function main(){
@@ -111,7 +114,8 @@ async function main(){
 main();
 
 let searchBox = document.getElementById("searchVal");
-searchBox.addEventListener('input',(e)=>{
+searchBox.addEventListener('input',searchFood);
+function searchFood(e) {
 
     let val = e.target.value.toLowerCase();
     // console.log(val);
@@ -119,9 +123,7 @@ searchBox.addEventListener('input',(e)=>{
         const isVisible = food.foodName.toLowerCase().includes(val);
         food.cardDiv.classList.toggle("hide" , !isVisible)
     })
-   
-});
-
+}
 
 let orderMap = new Map();
 
@@ -160,4 +162,20 @@ function renderOrder(map) {
       })
       ordSum.innerHTML=`Total Bill Amount = ${sum.toFixed(2)}$`
     
+}
+function pay(el){
+    if(el.innerText === "Confirm"){
+
+        el.innerText = "Pay"
+        document.querySelector("#sec5 ol").style.color = 'green'
+    }
+
+     else{
+        el.innerText = "Confirm"
+        ordSum.innerHTML=`Paid`
+        ordSum.style.color = 'green'
+        ordSum.style.fontSize = '1.5vw';
+        ordList.innerHTML="";
+        setTimeout(thankyouFnc,2000)
+     }
 }
